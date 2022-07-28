@@ -19,6 +19,7 @@ public class PersonJdbcDao {
 
     class PersonRowMapper implements RowMapper<Person> {
 
+
         @Override
         public Person mapRow(ResultSet resultSet, int i) throws SQLException {
             Person person = new Person();
