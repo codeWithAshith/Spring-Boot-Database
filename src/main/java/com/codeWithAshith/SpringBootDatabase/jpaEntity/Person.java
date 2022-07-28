@@ -1,10 +1,9 @@
-package com.codeWithAshith.SpringBootDatabase.jpa;
+package com.codeWithAshith.SpringBootDatabase.jpaEntity;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 import javax.persistence.NamedQuery;
-import javax.transaction.Transactional;
 import java.util.Date;
 
 @Entity

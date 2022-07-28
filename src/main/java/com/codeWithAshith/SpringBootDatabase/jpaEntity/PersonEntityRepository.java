@@ -1,4 +1,4 @@
-package com.codeWithAshith.SpringBootDatabase.jpa;
+package com.codeWithAshith.SpringBootDatabase.jpaEntity;
 
 import org.springframework.stereotype.Repository;
 
@@ -6,12 +6,11 @@ import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.TypedQuery;
 import javax.transaction.Transactional;
-import java.sql.Timestamp;
 import java.util.List;
 
 @Repository
 @Transactional
-public class PersonEntityDao {
+public class PersonEntityRepository {
 
     @PersistenceContext
     EntityManager entityManager;

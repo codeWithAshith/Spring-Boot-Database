@@ -1,4 +1,4 @@
-package com.codeWithAshith.SpringBootDatabase.jpa;
+package com.codeWithAshith.SpringBootDatabase.jpaEntity;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
@@ -11,17 +11,17 @@ import java.util.Date;
 public class SpringBootEntityDatabaseApplication implements CommandLineRunner {
 
     @Autowired
-    PersonEntityDao personEntityDao;
+    PersonEntityRepository personEntityRepository;
     public static void main(String[] args) {
         SpringApplication.run(SpringBootEntityDatabaseApplication.class, args);
     }
 
     @Override
     public void run(String... args) throws Exception {
-        System.out.println(personEntityDao.findAll());
-        System.out.println(personEntityDao.findById(101));
-        personEntityDao.deleteById(102) ;
-        System.out.println(personEntityDao.insert(new Person(103, "Abc", "asas", new Date())));
-        System.out.println(personEntityDao.update(new Person(103, "Arun", "Mumbai", new Date())));
+        System.out.println(personEntityRepository.findAll());
+        System.out.println(personEntityRepository.findById(101));
+        personEntityRepository.deleteById(102) ;
+        System.out.println(personEntityRepository.insert(new Person(103, "Abc", "asas", new Date())));
+        System.out.println(personEntityRepository.update(new Person(103, "Arun", "Mumbai", new Date())));
     }
 }
