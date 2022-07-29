@@ -17,7 +17,6 @@ public class SpringBootJpaDatabaseApplication implements CommandLineRunner {
         SpringApplication.run(SpringBootJpaDatabaseApplication.class, args);
     }
 
-    @Override
     public void run(String... args) throws Exception {
         System.out.println(personJpaRepository.findAll());
         System.out.println(personJpaRepository.findById(101));
